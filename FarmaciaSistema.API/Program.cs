@@ -1,4 +1,13 @@
+using FarmaciaSistema.API.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+// --- INICIO DEL CÓDIGO A AGREGAR ---
+
+// 1. Configurar la conexión a la base de datos
+builder.Services.AddDbContext<FarmaciaSistemaDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 // Add services to the container.
 

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FarmaciaSistema.Domain
 {
-    internal class Venta
+    public class Venta
     {
+        public int Id { get; set; }
+        public DateTime Fecha { get; set; }
+        public decimal Total { get; set; }
+        public int UsuarioId { get; set; }
     }
 }

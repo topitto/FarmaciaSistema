@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "FarmaciaSistema.Application/1.0.0": {
+        "dependencies": {
+          "FarmaciaSistema.Domain": "1.0.0"
+        },
+        "runtime": {
+          "FarmaciaSistema.Application.dll": {}
+        }
+      },
+      "FarmaciaSistema.Domain/1.0.0": {
+        "runtime": {
+          "FarmaciaSistema.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FarmaciaSistema.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FarmaciaSistema.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

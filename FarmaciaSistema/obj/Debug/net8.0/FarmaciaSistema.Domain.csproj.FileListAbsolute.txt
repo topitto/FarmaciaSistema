@@ -1,0 +1,11 @@
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\bin\Debug\net8.0\FarmaciaSistema.Domain.deps.json
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\bin\Debug\net8.0\FarmaciaSistema.Domain.dll
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\bin\Debug\net8.0\FarmaciaSistema.Domain.pdb
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\FarmaciaSistema.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\FarmaciaSistema.Domain.AssemblyInfoInputs.cache
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\FarmaciaSistema.Domain.AssemblyInfo.cs
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\FarmaciaSistema.Domain.csproj.CoreCompileInputs.cache
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\FarmaciaSistema.Domain.dll
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\refint\FarmaciaSistema.Domain.dll
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\FarmaciaSistema.Domain.pdb
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\ref\FarmaciaSistema.Domain.dll

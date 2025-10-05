@@ -1,0 +1,15 @@
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\bin\Debug\net8.0\FarmaciaSistema.Application.deps.json
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\bin\Debug\net8.0\FarmaciaSistema.Application.dll
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\bin\Debug\net8.0\FarmaciaSistema.Application.pdb
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\bin\Debug\net8.0\FarmaciaSistema.Domain.dll
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\bin\Debug\net8.0\FarmaciaSistema.Domain.pdb
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\FarmaciaSistema.Application.csproj.AssemblyReference.cache
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\FarmaciaSistema.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\FarmaciaSistema.Application.AssemblyInfoInputs.cache
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\FarmaciaSistema.Application.AssemblyInfo.cs
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\FarmaciaSistema.Application.csproj.CoreCompileInputs.cache
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\Farmacia.D5375BAC.Up2Date
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\FarmaciaSistema.Application.dll
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\refint\FarmaciaSistema.Application.dll
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\FarmaciaSistema.Application.pdb
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\ref\FarmaciaSistema.Application.dll
