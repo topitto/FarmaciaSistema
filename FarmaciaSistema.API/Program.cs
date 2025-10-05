@@ -1,4 +1,6 @@
 using FarmaciaSistema.API.Data;
+using FarmaciaSistema.API.Repositories;
+using FarmaciaSistema.Application.Contracts;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<FarmaciaSistemaDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<IProveedorRepository, ProveedorRepository>();
 
 // Add services to the container.
 

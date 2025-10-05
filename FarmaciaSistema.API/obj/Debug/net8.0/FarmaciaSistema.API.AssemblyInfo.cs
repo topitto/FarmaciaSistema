@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FarmaciaSistema.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbbb77f61363edd0d681deaa00a9a791cde38abf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abb9f115e3781e18bc18dd481b76515abd78d77b")]
 [assembly: System.Reflection.AssemblyProductAttribute("FarmaciaSistema.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FarmaciaSistema.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

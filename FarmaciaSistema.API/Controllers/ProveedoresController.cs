@@ -4,6 +4,7 @@ using FarmaciaSistema.API.Data; // Para usar el DbContext
 using FarmaciaSistema.Domain; // Para usar la entidad Proveedor
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using FarmaciaSistema.Application.Contracts;
 
 namespace FarmaciaSistema.API.Controllers
 {
@@ -11,22 +12,20 @@ namespace FarmaciaSistema.API.Controllers
     [Route("api/[controller]")] // La URL será -> /api/Proveedores
     public class ProveedoresController : ControllerBase
     {
-        private readonly FarmaciaSistemaDbContext _context;
+        private readonly IProveedorRepository _proveedorRepository;
 
         // El DbContext se "inyecta" automáticamente aquí gracias a la configuración en Program.cs
-        public ProveedoresController(FarmaciaSistemaDbContext context)
+        public ProveedoresController(IProveedorRepository proveedorRepository)
         {
-            _context = context;
+            _proveedorRepository = proveedorRepository;
         }
 
         // Este método manejará las peticiones GET a /api/Proveedores
         [HttpGet]
         public async Task<ActionResult<List<Proveedor>>> GetProveedores()
         {
-            // Usa el DbContext para ir a la tabla Proveedores y traerlos todos
-            var proveedores = await _context.Proveedores.ToListAsync();
-
-            // Devuelve la lista con un código de estado 200 OK
+            // Ahora llamamos al método del repositorio
+            var proveedores = await _proveedorRepository.GetAllProveedoresAsync();
             return Ok(proveedores);
         }
     }
