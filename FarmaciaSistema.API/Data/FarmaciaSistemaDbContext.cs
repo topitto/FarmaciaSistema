@@ -16,5 +16,30 @@ namespace FarmaciaSistema.API.Data
         public DbSet<Venta> Ventas { get; set; }
         public DbSet<Compra> Compras { get; set; }
         public DbSet<CompraDetalle> ComprasDetalles { get; set; }
+
+        // Dentro de la clase FarmaciaSistemaDbContext
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Aquí agregamos los datos iniciales para la entidad Proveedor
+            modelBuilder.Entity<Proveedor>().HasData(
+                new Proveedor
+                {
+                    Id = 1,
+                    Nombre = "Proveedor Principal",
+                    Contacto = "Juan Pérez",
+                    Telefono = "6621234567"
+                },
+                new Proveedor
+                {
+                    Id = 2,
+                    Nombre = "Bayer de México",
+                    Contacto = "Ana García",
+                    Telefono = "6627654321"
+                }
+            );
+        }
     }
 }
