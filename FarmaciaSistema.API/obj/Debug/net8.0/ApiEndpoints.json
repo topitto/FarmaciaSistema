@@ -20,6 +20,32 @@
     ]
   },
   {
+    "ContainingType": "FarmaciaSistema.API.Controllers.UsuariosController",
+    "Method": "Login",
+    "RelativePath": "api/Usuarios/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "FarmaciaSistema.Application.DTOs.LoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmaciaSistema.API.Controllers.UsuariosController",
+    "Method": "GetNombresDeUsuarios",
+    "RelativePath": "api/Usuarios/Nombres",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FarmaciaSistema.API.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

@@ -23,6 +23,7 @@ namespace FarmaciaSistema.API.Data
         {
             base.OnModelCreating(modelBuilder);
 
+
             // Aquí agregamos los datos iniciales para la entidad Proveedor
             modelBuilder.Entity<Proveedor>().HasData(
                 new Proveedor
@@ -38,6 +39,16 @@ namespace FarmaciaSistema.API.Data
                     Nombre = "Bayer de México",
                     Contacto = "Ana García",
                     Telefono = "6627654321"
+                }
+            );
+            modelBuilder.Entity<Usuario>().HasData(
+                new Usuario
+                {
+                    Id = 1,
+                    NombreUsuario = "admin",
+                    // La contraseña es "1234". Esto es solo para pruebas, luego lo haremos más seguro.
+                    PasswordHash = "1234",
+                    Rol = "Administrador"
                 }
             );
         }

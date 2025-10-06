@@ -169,6 +169,15 @@ namespace FarmaciaSistema.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            NombreUsuario = "admin",
+                            PasswordHash = "1234",
+                            Rol = "Administrador"
+                        });
                 });
 
             modelBuilder.Entity("FarmaciaSistema.Domain.Venta", b =>

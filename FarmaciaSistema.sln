@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaciaSistema.Application
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaciaSistema.API", "FarmaciaSistema.API\FarmaciaSistema.API.csproj", "{FCC9B64C-31E0-4318-9C24-9A514B6AF22C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaciaSistema.Desktop", "FarnaciaSistema.Desktop\FarmaciaSistema.Desktop.csproj", "{52A24B62-4C32-40E8-A61C-DCC6D38DB1C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FCC9B64C-31E0-4318-9C24-9A514B6AF22C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCC9B64C-31E0-4318-9C24-9A514B6AF22C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCC9B64C-31E0-4318-9C24-9A514B6AF22C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52A24B62-4C32-40E8-A61C-DCC6D38DB1C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A24B62-4C32-40E8-A61C-DCC6D38DB1C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A24B62-4C32-40E8-A61C-DCC6D38DB1C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A24B62-4C32-40E8-A61C-DCC6D38DB1C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
