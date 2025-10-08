@@ -23,3 +23,4 @@ C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\ne
 C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\net8.0-windows\ref\FarmaciaSistema.Desktop.dll
 C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\net8.0-windows\FarmaciaSistema.Desktop.sourcelink.json
