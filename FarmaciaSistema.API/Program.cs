@@ -11,6 +11,7 @@ builder.Services.AddDbContext<FarmaciaSistemaDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IProveedorRepository, ProveedorRepository>();
+builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 
 // Add services to the container.
 
