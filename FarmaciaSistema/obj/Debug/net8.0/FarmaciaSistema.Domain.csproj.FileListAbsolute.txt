@@ -9,3 +9,4 @@ C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\Far
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\refint\FarmaciaSistema.Domain.dll
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\FarmaciaSistema.Domain.pdb
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\ref\FarmaciaSistema.Domain.dll
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema\obj\Debug\net8.0\FarmaciaSistema.Domain.sourcelink.json
