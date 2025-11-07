@@ -23,5 +23,11 @@ namespace FarmaciaSistema.Desktop
         {
             InitializeComponent();
         }
+        // Dentro de la clase MainWindow
+        private void BtnProveedores_Click(object sender, RoutedEventArgs e)
+        {
+            ProveedoresWindow ventanaProveedores = new ProveedoresWindow();
+            ventanaProveedores.Show();
+        }
     }
 }

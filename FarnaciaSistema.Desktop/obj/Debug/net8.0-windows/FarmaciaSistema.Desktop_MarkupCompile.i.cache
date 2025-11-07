@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\App.xaml
-2-216653475
+31199737833
 
-7927529815
+92053711675
 199913655758
-LoginWindow.xaml;MainWindow.xaml;
+LoginWindow.xaml;MainWindow.xaml;ProveedoresWindow.xaml;
 
-False
+True
 
