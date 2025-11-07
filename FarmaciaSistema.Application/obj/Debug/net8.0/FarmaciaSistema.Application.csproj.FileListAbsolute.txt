@@ -13,3 +13,4 @@ C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debu
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\refint\FarmaciaSistema.Application.dll
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\FarmaciaSistema.Application.pdb
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\ref\FarmaciaSistema.Application.dll
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.Application\obj\Debug\net8.0\FarmaciaSistema.Application.sourcelink.json

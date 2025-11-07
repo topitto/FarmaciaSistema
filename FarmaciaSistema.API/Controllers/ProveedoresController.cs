@@ -28,5 +28,52 @@ namespace FarmaciaSistema.API.Controllers
             var proveedores = await _proveedorRepository.GetAllProveedoresAsync();
             return Ok(proveedores);
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Proveedor>> GetProveedor(int id)
+        {
+            var proveedor = await _proveedorRepository.GetProveedorByIdAsync(id);
+            if (proveedor == null)
+            {
+                return NotFound(); // Responde 404 si no se encuentra
+            }
+            return Ok(proveedor);
+        }
+
+        // POST: api/Proveedores
+        [HttpPost]
+        public async Task<ActionResult> CreateProveedor(Proveedor proveedor)
+        {
+            await _proveedorRepository.AddProveedorAsync(proveedor);
+            // Devuelve 201 Created con la info del nuevo proveedor
+            return CreatedAtAction(nameof(GetProveedor), new { id = proveedor.Id }, proveedor);
+        }
+
+        // PUT: api/Proveedores/5
+        [HttpPut("{id}")]
+        public async Task<ActionResult> UpdateProveedor(int id, Proveedor proveedor)
+        {
+            if (id != proveedor.Id)
+            {
+                return BadRequest("El Id del proveedor no coincide.");
+            }
+
+            await _proveedorRepository.UpdateProveedorAsync(proveedor);
+            return NoContent(); // Responde 204 No Content (éxito sin devolver datos)
+        }
+
+        // DELETE: api/Proveedores/5
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteProveedor(int id)
+        {
+            var proveedor = await _proveedorRepository.GetProveedorByIdAsync(id);
+            if (proveedor == null)
+            {
+                return NotFound();
+            }
+
+            await _proveedorRepository.DeleteProveedorAsync(id);
+            return NoContent(); // Responde 204 No Content
+        }
     }
 }

@@ -175,3 +175,4 @@ C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\FarmaciaSistema.API.genruntimeconfig.cache
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\ref\FarmaciaSistema.API.dll
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\FarmaciaSistema.API.sourcelink.json
