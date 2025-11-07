@@ -37,7 +37,7 @@
                    Margin="20"/>
 
         <Button Grid.Row="1" Grid.Column="0" Content="Punto de Venta"/>
-        <Button Grid.Row="1" Grid.Column="1" Content="Inventario"/>
+        <Button x:Name="BtnInventario" Grid.Row="1" Grid.Column="1" Content="Inventario" Click="BtnInventario_Click"/>
         <Button x:Name="Name" Grid.Row="1" Grid.Column="2" Content="Proveedores" Click="BtnProveedores_Click"/>
 
         <Button Grid.Row="2" Grid.Column="0" Content="Compras"/>

@@ -1,0 +1,55 @@
+﻿<Window x:Class="FarmaciaSistema.Desktop.InventarioWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FarmaciaSistema.Desktop"
+        mc:Ignorable="d"
+        Title="Gestión de Inventario" Height="500" Width="900"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="ProductosGrid" 
+                  Grid.Column="0" 
+                  AutoGenerateColumns="False" 
+                  IsReadOnly="True"
+                  SelectionChanged="ProductosGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="*"/>
+                <DataGridTextColumn Header="Descripción" Binding="{Binding Descripcion}" Width="*"/>
+                <DataGridTextColumn Header="Precio" Binding="{Binding Precio, StringFormat=C}" Width="80"/>
+                <DataGridTextColumn Header="Stock" Binding="{Binding Stock}" Width="70"/>
+                <DataGridTextColumn Header="Caducidad" Binding="{Binding FechaCaducidad, StringFormat=d}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Column="1" Margin="10,0,0,0">
+            <Label Content="ID"/>
+            <TextBox x:Name="TxtId" IsReadOnly="True" Margin="0,0,0,10"/>
+
+            <Label Content="Nombre"/>
+            <TextBox x:Name="TxtNombre" Margin="0,0,0,10"/>
+
+            <Label Content="Descripción"/>
+            <TextBox x:Name="TxtDescripcion" Margin="0,0,0,10"/>
+
+            <Label Content="Precio"/>
+            <TextBox x:Name="TxtPrecio" Margin="0,0,0,10"/>
+
+            <Label Content="Stock"/>
+            <TextBox x:Name="TxtStock" Margin="0,0,0,10"/>
+
+            <Label Content="Fecha de Caducidad"/>
+            <DatePicker x:Name="DpFechaCaducidad" Margin="0,0,0,10"/>
+
+            <Button x:Name="BtnGuardar" Content="Guardar" Margin="0,10,0,5" Click="BtnGuardar_Click"/>
+            <Button x:Name="BtnEliminar" Content="Eliminar" Margin="0,5,0,5" Click="BtnEliminar_Click"/>
+            <Button x:Name="BtnLimpiar" Content="Limpiar" Margin="0,5,0,5" Click="BtnLimpiar_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

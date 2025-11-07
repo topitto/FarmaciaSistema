@@ -29,5 +29,10 @@ namespace FarmaciaSistema.Desktop
             ProveedoresWindow ventanaProveedores = new ProveedoresWindow();
             ventanaProveedores.Show();
         }
+        private void BtnInventario_Click(object sender, RoutedEventArgs e)
+        {
+            InventarioWindow ventanaInventario = new InventarioWindow();
+            ventanaInventario.Show();
+        }
     }
 }

@@ -51,6 +51,36 @@ namespace FarmaciaSistema.API.Data
                     Rol = "Administrador"
                 }
             );
+            modelBuilder.Entity<Producto>().HasData(
+                new Producto
+                {
+                    Id = 1,
+                    Nombre = "Paracetamol 500mg",
+                    Descripcion = "Caja con 20 tabletas",
+                    Precio = 45.50m,
+                    Stock = 100,
+                    FechaCaducidad = new DateTime(2026, 12, 31)
+                },
+                new Producto
+                {
+                    Id = 2,
+                    Nombre = "Amoxicilina 250mg",
+                    Descripcion = "Suspensión pediátrica 100ml",
+                    Precio = 120.00m,
+                    Stock = 50,
+                    FechaCaducidad = new DateTime(2025, 11, 30)
+                },
+                new Producto
+                 {
+                     Id = 3,
+                    Nombre = "Loratadina 10mg",
+                    Descripcion = "Caja con 10 tabletas",
+                    Precio = 75.00m,
+                    Stock = 75,
+                    FechaCaducidad = new DateTime(2027, 01, 15)
+                }
+            );
+
         }
     }
 }
