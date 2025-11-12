@@ -5,14 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FarmaciaSistema.Desktop"
         mc:Ignorable="d"
-        Title="Menú Principal - Sistema de Farmacia" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+        Title="FarmaciaSistema - Punto de Venta" Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="#F0F2F5">
 
     <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Margin" Value="10"/>
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="FontWeight" Value="Bold"/>
+        <Style x:Key="TopNavButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#005A9C"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SubtleButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#E0E0E0"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Margin" Value="5,0"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="MinWidth" Value="140"/>
+            <Setter Property="MinHeight" Value="40"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#BDBDBD"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#9E9E9E"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Window.Resources>
 
@@ -20,28 +70,59 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        <Border Grid.Row="0" Background="#007ACC">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="BtnInventario" Content="Inventario" Style="{StaticResource TopNavButtonStyle}" Click="BtnInventario_Click"/>
+                <Button x:Name="BtnProveedores" Content="Proveedores" Style="{StaticResource TopNavButtonStyle}" Click="BtnProveedores_Click"/>
+                <Button x:Name="BtnClientes" Content="Clientes" Style="{StaticResource TopNavButtonStyle}" Click="BtnClientes_Click"/>
+                <Button x:Name="BtnReportes" Content="Reportes" Style="{StaticResource TopNavButtonStyle}"/>
+                <Button x:Name="BtnUsuarios" Content="Usuarios" Style="{StaticResource TopNavButtonStyle}"/>
+            </StackPanel>
+        </Border>
 
-        <TextBlock Text="Menú Principal" 
-                   Grid.ColumnSpan="3" 
-                   HorizontalAlignment="Center" 
-                   FontSize="28" 
-                   FontWeight="Bold" 
-                   Margin="20"/>
+        <Grid Grid.Row="1" Margin="15">
+            <DockPanel Margin="0,0,0,0">
+                <StackPanel DockPanel.Dock="Top" Orientation="Vertical">
+                    <Label Content="Escanear producto o ingresar código:" FontWeight="Bold"/>
+                    <TextBox x:Name="TxtCodigoProducto" FontSize="16" Margin="0,0,0,10"/>
+                </StackPanel>
 
-        <Button Grid.Row="1" Grid.Column="0" Content="Punto de Venta"/>
-        <Button x:Name="BtnInventario" Grid.Row="1" Grid.Column="1" Content="Inventario" Click="BtnInventario_Click"/>
-        <Button x:Name="Name" Grid.Row="1" Grid.Column="2" Content="Proveedores" Click="BtnProveedores_Click"/>
+                <TextBlock DockPanel.Dock="Top" Text="Productos en la Venta Actual" FontSize="18" Margin="0,10,0,5"/>
 
-        <Button Grid.Row="2" Grid.Column="0" Content="Compras"/>
-        <Button Grid.Row="2" Grid.Column="1" Content="Reportes"/>
-        <Button Grid.Row="2" Grid.Column="2" Content="Usuarios"/>
+                <ListView x:Name="ListaVenta" Background="White">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Producto" Width="300"/>
+                            <GridViewColumn Header="Cantidad" Width="100"/>
+                            <GridViewColumn Header="Precio Unit." Width="120"/>
+                            <GridViewColumn Header="Subtotal" Width="120"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </DockPanel>
+        </Grid>
+
+        <Border Grid.Row="2" Background="White" BorderThickness="0,1,0,0" BorderBrush="#DDDDDD" Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button x:Name="BtnRepetirArticulo" Content="Repetir Artículo" 
+                            Style="{StaticResource SubtleButtonStyle}"/>
+                    <Button x:Name="BtnEliminarArticulo" Content="Eliminar Artículo" 
+                            Style="{StaticResource SubtleButtonStyle}"/>
+                </StackPanel>
+
+                <Button x:Name="BtnSubTotal" Grid.Column="1" Content="Sub Total" 
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource SubtleButtonStyle}"/>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

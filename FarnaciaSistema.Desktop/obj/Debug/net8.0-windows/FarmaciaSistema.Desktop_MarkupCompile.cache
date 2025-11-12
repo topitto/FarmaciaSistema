@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\App.xaml
-41796951055
+5-1327265376
 
-9-2119493664
+11-1581588800
 199913655758
-InventarioWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ProveedoresWindow.xaml;
+ClientesWindow.xaml;InventarioWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ProveedoresWindow.xaml;
 
 False
 

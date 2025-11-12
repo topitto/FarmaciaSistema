@@ -12,6 +12,7 @@ builder.Services.AddDbContext<FarmaciaSistemaDbContext>(options =>
 
 builder.Services.AddScoped<IProveedorRepository, ProveedorRepository>();
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 
 // Add services to the container.
 

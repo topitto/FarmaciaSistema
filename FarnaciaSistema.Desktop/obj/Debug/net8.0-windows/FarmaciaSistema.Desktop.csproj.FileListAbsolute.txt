@@ -28,3 +28,5 @@ C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\ne
 C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\net8.0-windows\ProveedoresWindow.baml
 C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\net8.0-windows\InventarioWindow.g.cs
 C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\net8.0-windows\InventarioWindow.baml
+C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\net8.0-windows\ClientesWindow.g.cs
+C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\net8.0-windows\ClientesWindow.baml

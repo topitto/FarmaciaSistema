@@ -34,5 +34,10 @@ namespace FarmaciaSistema.Desktop
             InventarioWindow ventanaInventario = new InventarioWindow();
             ventanaInventario.Show();
         }
+        private void BtnClientes_Click(object sender, RoutedEventArgs e)
+        {
+            ClientesWindow ventanaClientes = new ClientesWindow();
+            ventanaClientes.Show();
+        }
     }
 }
