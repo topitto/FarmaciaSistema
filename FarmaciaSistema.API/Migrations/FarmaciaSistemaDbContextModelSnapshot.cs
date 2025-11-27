@@ -44,7 +44,7 @@ namespace FarmaciaSistema.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Clientes");
+                    b.ToTable("Clientes", (string)null);
                 });
 
             modelBuilder.Entity("FarmaciaSistema.Domain.Compra", b =>
@@ -68,7 +68,7 @@ namespace FarmaciaSistema.API.Migrations
 
                     b.HasIndex("ProveedorId");
 
-                    b.ToTable("Compras");
+                    b.ToTable("Compras", (string)null);
                 });
 
             modelBuilder.Entity("FarmaciaSistema.Domain.CompraDetalle", b =>
@@ -97,7 +97,7 @@ namespace FarmaciaSistema.API.Migrations
 
                     b.HasIndex("ProductoId");
 
-                    b.ToTable("ComprasDetalles");
+                    b.ToTable("ComprasDetalles", (string)null);
                 });
 
             modelBuilder.Entity("FarmaciaSistema.Domain.Producto", b =>
@@ -127,7 +127,7 @@ namespace FarmaciaSistema.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Productos");
+                    b.ToTable("Productos", (string)null);
 
                     b.HasData(
                         new
@@ -181,7 +181,7 @@ namespace FarmaciaSistema.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Proveedores");
+                    b.ToTable("Proveedores", (string)null);
 
                     b.HasData(
                         new
@@ -222,7 +222,7 @@ namespace FarmaciaSistema.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuarios", (string)null);
 
                     b.HasData(
                         new
@@ -253,7 +253,7 @@ namespace FarmaciaSistema.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Ventas");
+                    b.ToTable("Ventas", (string)null);
                 });
 
             modelBuilder.Entity("FarmaciaSistema.Domain.Compra", b =>

@@ -161,12 +161,6 @@ C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\staticwebassets\msbuild.FarmaciaSistema.API.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\staticwebassets\msbuild.FarmaciaSistema.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\staticwebassets\msbuild.build.FarmaciaSistema.API.props
-C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.FarmaciaSistema.API.props
-C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FarmaciaSistema.API.props
-C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\Farmacia.AC558521.Up2Date
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\FarmaciaSistema.API.dll
@@ -176,3 +170,9 @@ C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\ref\FarmaciaSistema.API.dll
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\FarmaciaSistema.API.sourcelink.json
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\luisl\source\repos\FarmaciaSistema\FarmaciaSistema.API\obj\Debug\net8.0\swae.build.ex.cache

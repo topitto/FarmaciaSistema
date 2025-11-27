@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "A/mC888Yvrl2/FRuVZLxO/hEEv1mIxWOc0U2up9KxWk=",
-  "Source": "FarmaciaSistema.API",
-  "BasePath": "_content/FarmaciaSistema.API",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"AW7pVTU3lGLTGwS4JAjMDz4QtVTZdVRnVnt85Eoic9Q=","Source":"FarmaciaSistema.API","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

@@ -92,13 +92,13 @@
 
                 <TextBlock DockPanel.Dock="Top" Text="Productos en la Venta Actual" FontSize="18" Margin="0,10,0,5"/>
 
-                <ListView x:Name="ListaVenta" Background="White">
+                <ListView x:Name="ListaVenta" Background="White" FontSize="16">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Producto" Width="300"/>
-                            <GridViewColumn Header="Cantidad" Width="100"/>
-                            <GridViewColumn Header="Precio Unit." Width="120"/>
-                            <GridViewColumn Header="Subtotal" Width="120"/>
+                            <GridViewColumn Header="Producto" Width="350" DisplayMemberBinding="{Binding Nombre}"/>
+                            <GridViewColumn Header="Cantidad" Width="100" DisplayMemberBinding="{Binding Cantidad}"/>
+                            <GridViewColumn Header="Precio Unit." Width="120" DisplayMemberBinding="{Binding PrecioUnitario, StringFormat=C}"/>
+                            <GridViewColumn Header="Subtotal" Width="120" DisplayMemberBinding="{Binding Subtotal, StringFormat=C}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
@@ -113,15 +113,17 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
-                    <Button x:Name="BtnRepetirArticulo" Content="Repetir Artículo" 
-                            Style="{StaticResource SubtleButtonStyle}"/>
+                    <Button x:Name="BtnRepetirArticulo" Content="Repetir Artículo"
+                            Style="{StaticResource SubtleButtonStyle}"
+                            Click="BtnRepetirArticulo_Click"/>
                     <Button x:Name="BtnEliminarArticulo" Content="Eliminar Artículo" 
-                            Style="{StaticResource SubtleButtonStyle}"/>
+                            Style="{StaticResource SubtleButtonStyle}"
+                            Click="BtnEliminarArticulo_Click"/>
                 </StackPanel>
 
                 <Button x:Name="BtnSubTotal" Grid.Column="1" Content="Sub Total" 
-                        HorizontalAlignment="Right"
-                        Style="{StaticResource SubtleButtonStyle}"/>
+                        Style="{StaticResource SubtleButtonStyle}"
+                        Click="BtnSubTotal_Click"/>
             </Grid>
         </Border>
     </Grid>
