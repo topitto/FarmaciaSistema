@@ -9,7 +9,7 @@ namespace FarmaciaSistema.API.Data
         {
         }
 
-        // Define un DbSet por cada entidad que quieras que se convierta en tabla
+    
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
@@ -18,7 +18,6 @@ namespace FarmaciaSistema.API.Data
         public DbSet<CompraDetalle> ComprasDetalles { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
 
-        // Dentro de la clase FarmaciaSistemaDbContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
