@@ -175,5 +175,10 @@ namespace FarmaciaSistema.Desktop
         {
             new CitasWindow().Show();
         }
+
+        private void BtnUsuarios_Click(object sender, RoutedEventArgs e)
+        {
+            new UsuariosWindow().Show();
+        }
     }
 }

@@ -80,7 +80,7 @@
                 <Button x:Name="BtnClientes" Content="Clientes" Style="{StaticResource TopNavButtonStyle}" Click="BtnClientes_Click"/>
                 <Button x:Name="BtnCitas" Content="Citas Médicas" 
                     Style="{StaticResource TopNavButtonStyle}" Click="BtnCitas_Click"/>
-                <Button x:Name="BtnUsuarios" Content="Usuarios" Style="{StaticResource TopNavButtonStyle}"/>
+                <Button x:Name="BtnUsuarios" Content="Usuarios" Style="{StaticResource TopNavButtonStyle}" Click="BtnUsuarios_Click"/>
             </StackPanel>
         </Border>
 

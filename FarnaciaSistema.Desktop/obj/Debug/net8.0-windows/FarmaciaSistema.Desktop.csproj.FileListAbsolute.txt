@@ -74,3 +74,5 @@ C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\bin\Debug\ne
 C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\bin\Debug\net8.0-windows\runtimes\win-x86\native\libwinpthread-1.dll
 C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\bin\Debug\net8.0-windows\runtimes\win-x86\native\qpdf.dll
 C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\bin\Debug\net8.0-windows\runtimes\win-x86\native\zlib1.dll
+C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\net8.0-windows\UsuariosWindow.baml
+C:\Users\luisl\source\repos\FarmaciaSistema\FarnaciaSistema.Desktop\obj\Debug\net8.0-windows\UsuariosWindow.g.cs

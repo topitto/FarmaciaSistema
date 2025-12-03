@@ -1,9 +1,7 @@
-﻿using FarmaciaSistema.API.Data;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using FarmaciaSistema.Application.Contracts;
 using FarmaciaSistema.Application.DTOs;
+using FarmaciaSistema.Domain;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FarmaciaSistema.API.Controllers
 {
@@ -11,53 +9,68 @@ namespace FarmaciaSistema.API.Controllers
     [Route("api/[controller]")]
     public class UsuariosController : ControllerBase
     {
-        private readonly FarmaciaSistemaDbContext _context;
+        private readonly IUsuarioRepository _usuarioRepository;
 
-        public UsuariosController(FarmaciaSistemaDbContext context)
+        // Inyectamos el Repositorio, ya no el DbContext directo
+        public UsuariosController(IUsuarioRepository usuarioRepository)
         {
-            _context = context;
+            _usuarioRepository = usuarioRepository;
         }
 
-        // GET: api/Usuarios/Nombres
+        // --- MÉTODOS EXISTENTES (LOGIN Y NOMBRES) ---
+
         [HttpGet("Nombres")]
         public async Task<IActionResult> GetNombresDeUsuarios()
         {
-            var usuarios = await _context.Usuarios
-                .Select(u => new { u.Id, u.NombreUsuario }) // Seleccionamos solo lo que necesitamos
-                .ToListAsync();
-
-            return Ok(usuarios);
+            // Reutilizamos el GetAll pero seleccionamos solo nombres
+            var usuarios = await _usuarioRepository.GetAllUsuariosAsync();
+            var nombres = usuarios.Select(u => new { u.Id, u.NombreUsuario }).ToList();
+            return Ok(nombres);
         }
 
-        // POST: api/Usuarios/Login
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginRequestDto loginRequest)
         {
-            if (loginRequest == null || string.IsNullOrEmpty(loginRequest.NombreUsuario) || string.IsNullOrEmpty(loginRequest.Password))
-            {
-                return BadRequest("El nombre de usuario y la contraseña son requeridos.");
-            }
+            // Nota: Para login rápido, usaremos GetAll y filtraremos en memoria 
+            // (en un sistema real, el repositorio debería tener un método GetByUsername)
+            var usuarios = await _usuarioRepository.GetAllUsuariosAsync();
+            var usuario = usuarios.FirstOrDefault(u => u.NombreUsuario == loginRequest.NombreUsuario);
 
-            // 1. Busca el usuario en la base de datos.
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(u => u.NombreUsuario == loginRequest.NombreUsuario);
-
-            if (usuario == null)
-            {
-                // Por seguridad, no decimos si falló el usuario o la contraseña.
-                return Unauthorized("Credenciales inválidas.");
-            }
-
-            // 2. Compara la contraseña.
-            // ADVERTENCIA: Esta comparación es insegura para un proyecto real,
-            // pero es suficiente para un proyecto escolar.
-            if (usuario.PasswordHash != loginRequest.Password)
+            if (usuario == null || usuario.PasswordHash != loginRequest.Password)
             {
                 return Unauthorized("Credenciales inválidas.");
             }
+            return Ok(new { Mensaje = "Inicio de sesión exitoso", Rol = usuario.Rol });
+        }
 
-            // 3. Si todo es correcto, devuelve una respuesta exitosa.
-            return Ok(new { Mensaje = "Inicio de sesión exitoso" });
+        // --- NUEVOS MÉTODOS CRUD ---
+
+        [HttpGet]
+        public async Task<ActionResult<List<Usuario>>> GetUsuarios()
+        {
+            return Ok(await _usuarioRepository.GetAllUsuariosAsync());
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> CreateUsuario(Usuario usuario)
+        {
+            await _usuarioRepository.AddUsuarioAsync(usuario);
+            return Ok(usuario);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> UpdateUsuario(int id, Usuario usuario)
+        {
+            if (id != usuario.Id) return BadRequest();
+            await _usuarioRepository.UpdateUsuarioAsync(usuario);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteUsuario(int id)
+        {
+            await _usuarioRepository.DeleteUsuarioAsync(id);
+            return NoContent();
         }
     }
 }
