@@ -13,6 +13,9 @@
     <Compile Update="ClientesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="CobroWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="InventarioWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

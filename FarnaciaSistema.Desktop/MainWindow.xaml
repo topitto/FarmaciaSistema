@@ -73,15 +73,59 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Background="#007ACC">
-            <StackPanel Orientation="Horizontal">
-                <Button x:Name="BtnInventario" Content="Inventario" Style="{StaticResource TopNavButtonStyle}" Click="BtnInventario_Click"/>
-                <Button x:Name="BtnProveedores" Content="Proveedores" Style="{StaticResource TopNavButtonStyle}" Click="BtnProveedores_Click"/>
-                <Button x:Name="BtnClientes" Content="Clientes" Style="{StaticResource TopNavButtonStyle}" Click="BtnClientes_Click"/>
-                <Button x:Name="BtnCitas" Content="Citas Médicas" 
+        <Border Grid.Row="0" Background="#007ACC" Padding="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Button x:Name="BtnInventario" Content="Inventario" 
+                    Style="{StaticResource TopNavButtonStyle}" Click="BtnInventario_Click"/>
+
+                    <Button x:Name="BtnProveedores" Content="Proveedores" 
+                    Style="{StaticResource TopNavButtonStyle}" Click="BtnProveedores_Click"/>
+
+                    <Button x:Name="BtnClientes" Content="Clientes" 
+                    Style="{StaticResource TopNavButtonStyle}" Click="BtnClientes_Click"/>
+
+                    <Button x:Name="BtnCitas" Content="Citas Médicas" 
                     Style="{StaticResource TopNavButtonStyle}" Click="BtnCitas_Click"/>
-                <Button x:Name="BtnUsuarios" Content="Usuarios" Style="{StaticResource TopNavButtonStyle}" Click="BtnUsuarios_Click"/>
-            </StackPanel>
+
+                    <Button x:Name="BtnUsuarios" Content="Usuarios" 
+                    Style="{StaticResource TopNavButtonStyle}"/>
+                </StackPanel>
+
+                <Button x:Name="BtnCerrarSesion" Grid.Column="1" Content="Cerrar Sesión" 
+                Background="#005A9C" Foreground="White" FontWeight="Bold"
+                Padding="15,5" Margin="5,0,5,0" BorderThickness="0" Cursor="Hand"
+                Click="BtnCerrarSesion_Click" Height="39" VerticalAlignment="Top">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="border" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#D32F2F"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Grid>
         </Border>
 
         <Grid Grid.Row="1" Margin="15">

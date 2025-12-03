@@ -18,6 +18,7 @@ namespace FarmaciaSistema.API.Data
         public DbSet<CompraDetalle> ComprasDetalles { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Cita> Citas { get; set; }
+        public DbSet<DetalleVenta> DetallesVenta { get; set; }
 
         // Dentro de la clase FarmaciaSistemaDbContext
 

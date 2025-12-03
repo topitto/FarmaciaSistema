@@ -12,5 +12,6 @@ namespace FarmaciaSistema.Domain
         public DateTime Fecha { get; set; }
         public decimal Total { get; set; }
         public int UsuarioId { get; set; }
+        public List<DetalleVenta> Detalles { get; set; }
     }
 }

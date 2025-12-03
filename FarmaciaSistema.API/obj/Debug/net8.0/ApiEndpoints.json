@@ -412,6 +412,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FarmaciaSistema.API.Controllers.VentasController",
+    "Method": "CreateVenta",
+    "RelativePath": "api/Ventas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ventaDto",
+        "Type": "FarmaciaSistema.Application.DTOs.VentaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FarmaciaSistema.API.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

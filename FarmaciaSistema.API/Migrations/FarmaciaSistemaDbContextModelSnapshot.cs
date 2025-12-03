@@ -133,6 +133,35 @@ namespace FarmaciaSistema.API.Migrations
                     b.ToTable("ComprasDetalles");
                 });
 
+            modelBuilder.Entity("FarmaciaSistema.Domain.DetalleVenta", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("PrecioUnitario")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VentaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductoId");
+
+                    b.HasIndex("VentaId");
+
+                    b.ToTable("DetallesVenta");
+                });
+
             modelBuilder.Entity("FarmaciaSistema.Domain.Producto", b =>
                 {
                     b.Property<int>("Id")
@@ -330,7 +359,31 @@ namespace FarmaciaSistema.API.Migrations
                     b.Navigation("Producto");
                 });
 
+            modelBuilder.Entity("FarmaciaSistema.Domain.DetalleVenta", b =>
+                {
+                    b.HasOne("FarmaciaSistema.Domain.Producto", "Producto")
+                        .WithMany()
+                        .HasForeignKey("ProductoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FarmaciaSistema.Domain.Venta", "Venta")
+                        .WithMany("Detalles")
+                        .HasForeignKey("VentaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Producto");
+
+                    b.Navigation("Venta");
+                });
+
             modelBuilder.Entity("FarmaciaSistema.Domain.Compra", b =>
+                {
+                    b.Navigation("Detalles");
+                });
+
+            modelBuilder.Entity("FarmaciaSistema.Domain.Venta", b =>
                 {
                     b.Navigation("Detalles");
                 });

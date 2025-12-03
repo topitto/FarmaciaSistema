@@ -165,11 +165,10 @@ namespace FarmaciaSistema.Desktop
                 return;
             }
 
-            // Calculamos el total sumando los subtotales de todos los items
-            decimal totalVenta = _itemsVenta.Sum(i => i.Subtotal);
-
-            // Formateamos el dinero (C2 significa formato moneda con 2 decimales)
-            MessageBox.Show($"El total a pagar es: {totalVenta:C2}\n\nAquí abriremos la pantalla de cobro próximamente.", "Sub Total");
+            // ABRIR VENTANA DE COBRO
+            // Le pasamos la lista de items (_itemsVenta) al constructor
+            CobroWindow cobroWindow = new CobroWindow(_itemsVenta);
+            cobroWindow.ShowDialog(); // ShowDialog bloquea la ventana principal hasta que cierres esta
         }
         private void BtnCitas_Click(object sender, RoutedEventArgs e)
         {
@@ -179,6 +178,22 @@ namespace FarmaciaSistema.Desktop
         private void BtnUsuarios_Click(object sender, RoutedEventArgs e)
         {
             new UsuariosWindow().Show();
+        }
+
+        private void BtnCerrarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Cerrar Sesión",
+        MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                // 1. Crear una nueva instancia de la ventana de Login
+                LoginWindow login = new LoginWindow();
+
+                // 2. Mostrar el Login
+                login.Show();
+
+                // 3. Cerrar la ventana principal actual (MainWindow)
+                this.Close();
+            }
         }
     }
 }
