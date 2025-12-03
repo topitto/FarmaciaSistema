@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="CitasWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ClientesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

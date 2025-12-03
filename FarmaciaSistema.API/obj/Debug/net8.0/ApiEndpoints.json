@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "FarmaciaSistema.API.Controllers.CitasController",
+    "Method": "CreateCita",
+    "RelativePath": "api/Citas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cita",
+        "Type": "FarmaciaSistema.Domain.Cita",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FarmaciaSistema.API.Controllers.ClientesController",
     "Method": "GetClientes",
     "RelativePath": "api/Clientes",

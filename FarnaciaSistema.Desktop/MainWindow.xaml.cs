@@ -171,5 +171,9 @@ namespace FarmaciaSistema.Desktop
             // Formateamos el dinero (C2 significa formato moneda con 2 decimales)
             MessageBox.Show($"El total a pagar es: {totalVenta:C2}\n\nAquí abriremos la pantalla de cobro próximamente.", "Sub Total");
         }
+        private void BtnCitas_Click(object sender, RoutedEventArgs e)
+        {
+            new CitasWindow().Show();
+        }
     }
 }

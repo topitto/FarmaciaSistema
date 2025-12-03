@@ -1,0 +1,40 @@
+﻿<Window x:Class="FarmaciaSistema.Desktop.CitasWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Consulta Médica" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded"
+        Background="#F0F2F5">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Nueva Consulta Médica" FontSize="24" FontWeight="Bold" Foreground="#007ACC" Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,15">
+            <Label Content="Seleccionar Paciente:" FontWeight="SemiBold"/>
+            <ComboBox x:Name="CboPacientes" DisplayMemberPath="Nombre" SelectedValuePath="Id" Height="30" FontSize="14"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="0,0,0,15">
+            <Label Content="Sintomatología:" FontWeight="SemiBold"/>
+            <TextBox x:Name="TxtSintomas" TextWrapping="Wrap" AcceptsReturn="True" 
+                     VerticalScrollBarVisibility="Auto" Height="100" FontSize="14" Padding="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Margin="0,0,0,20">
+            <Label Content="Receta Médica / Tratamiento:" FontWeight="SemiBold"/>
+            <TextBox x:Name="TxtReceta" TextWrapping="Wrap" AcceptsReturn="True" 
+                     VerticalScrollBarVisibility="Auto" Height="100" FontSize="14" Padding="5"/>
+        </StackPanel>
+
+        <Button x:Name="BtnGuardarCita" Grid.Row="4" Content="Finalizar Consulta y Guardar" 
+                Height="40" Background="#28A745" Foreground="White" FontWeight="Bold" FontSize="16"
+                Click="BtnGuardarCita_Click"/>
+    </Grid>
+</Window>
