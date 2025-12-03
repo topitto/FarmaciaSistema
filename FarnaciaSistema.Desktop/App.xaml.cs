@@ -9,6 +9,11 @@ namespace FarmaciaSistema.Desktop
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            // Licencia comunitaria (gratis)
+            QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
+        }
     }
 
 }

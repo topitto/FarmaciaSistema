@@ -12,6 +12,6 @@ namespace FarmaciaSistema.Domain
 
         // Relación con el Cliente (Paciente)
         public int ClienteId { get; set; }
-        public Cliente Cliente { get; set; }
+        public Cliente? Cliente { get; set; }
     }
 }

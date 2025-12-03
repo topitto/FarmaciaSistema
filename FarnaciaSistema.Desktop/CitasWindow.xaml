@@ -1,12 +1,13 @@
 ﻿<Window x:Class="FarmaciaSistema.Desktop.CitasWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Consulta Médica" Height="600" Width="800"
+        Title="Consulta Médica" Height="700" Width="900"
         WindowStartupLocation="CenterScreen" Loaded="Window_Loaded"
         Background="#F0F2F5">
 
     <Grid Margin="20">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -16,25 +17,73 @@
 
         <TextBlock Text="Nueva Consulta Médica" FontSize="24" FontWeight="Bold" Foreground="#007ACC" Margin="0,0,0,20"/>
 
-        <StackPanel Grid.Row="1" Margin="0,0,0,15">
-            <Label Content="Seleccionar Paciente:" FontWeight="SemiBold"/>
-            <ComboBox x:Name="CboPacientes" DisplayMemberPath="Nombre" SelectedValuePath="Id" Height="30" FontSize="14"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,15">
+            <Label Content="Tipo de Paciente:" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <RadioButton x:Name="RbExistente" Content="Paciente Ya Registrado" IsChecked="True" 
+                         VerticalAlignment="Center" Margin="0,0,15,0" Checked="RbTipoPaciente_Checked"/>
+            <RadioButton x:Name="RbNuevo" Content="Registrar Nuevo Paciente" 
+                         VerticalAlignment="Center" Checked="RbTipoPaciente_Checked"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Margin="0,0,0,15">
-            <Label Content="Sintomatología:" FontWeight="SemiBold"/>
+        <Grid Grid.Row="2" Margin="0,0,0,15">
+
+            <StackPanel x:Name="PanelPacienteExistente" Visibility="Visible">
+                <Label Content="Buscar Paciente:" FontWeight="SemiBold"/>
+                <ComboBox x:Name="CboPacientes" DisplayMemberPath="Nombre" SelectedValuePath="Id" Height="35" FontSize="14"/>
+            </StackPanel>
+
+            <Border x:Name="PanelPacienteNuevo" Visibility="Collapsed" Background="White" Padding="10">
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Grid.Column="0" Margin="0,0,5,5">
+                            <Label Content="Nombre Completo:"/>
+                            <TextBox x:Name="TxtNuevoNombre" Height="30"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="0" Grid.Column="1" Margin="5,0,0,5">
+                            <Label Content="Correo Electrónico:"/>
+                            <TextBox x:Name="TxtNuevoEmail" Height="30"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,5,5,0">
+                            <Label Content="Teléfono:"/>
+                            <TextBox x:Name="TxtNuevoTelefono" Height="30"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,5,0,0">
+                            <Label Content="RFC / Edad / ID:"/>
+                            <TextBox x:Name="TxtNuevoRfc" Height="30"/>
+                        </StackPanel>
+                    </Grid>
+                    <TextBlock Text="* Este paciente se guardará automáticamente en el sistema." 
+                   FontSize="11" Foreground="Gray" Margin="0,5,0,0" FontStyle="Italic"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <StackPanel Grid.Row="3" Margin="0,0,0,15">
+            <Label Content="Sintomatología y Diagnóstico:" FontWeight="SemiBold"/>
             <TextBox x:Name="TxtSintomas" TextWrapping="Wrap" AcceptsReturn="True" 
-                     VerticalScrollBarVisibility="Auto" Height="100" FontSize="14" Padding="5"/>
+                     VerticalScrollBarVisibility="Auto" FontSize="14" Padding="5"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Margin="0,0,0,20">
+        <StackPanel Grid.Row="4" Margin="0,0,0,20">
             <Label Content="Receta Médica / Tratamiento:" FontWeight="SemiBold"/>
             <TextBox x:Name="TxtReceta" TextWrapping="Wrap" AcceptsReturn="True" 
-                     VerticalScrollBarVisibility="Auto" Height="100" FontSize="14" Padding="5"/>
+                     VerticalScrollBarVisibility="Auto" FontSize="14" Padding="5"/>
         </StackPanel>
 
-        <Button x:Name="BtnGuardarCita" Grid.Row="4" Content="Finalizar Consulta y Guardar" 
-                Height="40" Background="#28A745" Foreground="White" FontWeight="Bold" FontSize="16"
-                Click="BtnGuardarCita_Click"/>
+        <Button x:Name="BtnGuardarCita" Grid.Row="5" Content="Finalizar Consulta y Guardar" 
+                Height="50" Background="#28A745" Foreground="White" FontWeight="Bold" FontSize="16"
+                Click="BtnGuardarCita_Click" Cursor="Hand"/>
     </Grid>
 </Window>
